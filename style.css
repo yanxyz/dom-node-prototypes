@@ -1,0 +1,109 @@
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 3px 5px;
+  border: 1px solid #333;
+}
+
+#output h3:hover {
+  cursor: pointer;
+}
+
+#output h3::before {
+  display: inline-block;
+  width: 2rem;
+  margin-right: 0.5rem;
+  content: "▶";
+  color: rgb(68, 114, 185);
+}
+
+#output h3.active::before {
+  content: "▼";
+}
+
+#output ul {
+  transition: height 1s;
+}
+
+#output ul {
+  display: none;
+}
+
+#output ul.active {
+  display: block;
+}
+
+#bar {
+  line-height: 3em;
+  background: white;
+}
+
+#bar a {
+  margin-left: 15px;
+}
+
+.fixed {
+  padding-top: 3em;
+}
+
+.fixed #bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 3px rgba(12,13,14,0.1), 0 4px 20px rgba(12,13,14,0.035), 0 1px 1px rgba(12,13,14,0.025);
+}
+
+#samples {
+  position: absolute;
+  height: 100px;
+  overflow: hidden;
+  top: -150px;
+}
+
+/* http://www.color-hex.com/color-palette/915 */
+
+.handler {
+  color: #EC891D;
+}
+
+.get, .set {
+  color: #E30074;
+}
+
+.method {
+  color: #2175d9;
+}
+
+.get::before {
+  content: 'get ';
+  color: #ccc;
+}
+
+.set::before {
+  content: 'set ';
+  color: #ccc;
+}
+
+.get.set::before {
+  content: 'get set ';
+  color: #ccc;
+}
+
+.method::after {
+  content: '()';
+}
+
+/**
+ * IE9
+ */
+
+.ie9 .toggle {
+  display: none;
+}
+
+.ie9 .collapsed {
+  display: block;
+}

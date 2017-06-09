@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+  <!--[if IE]>
+  <script src="https://unpkg.com/classlist.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <h1>DOM 节点原型链</h1>
+  <form action="">
+    <input type="text" id="name" placeholder="doc">
+    <input type="checkbox" id="svg">SVG
+  </form>
+  <ul>
+    <li>此页面仅支持 IE9+。</li>
+    <li><a href="2.html">IE8</a></li>
+  </ul>
+  <table>
+    <tr>
+      <th>type</th>
+      <td>Element</td>
+      <td>Document</td>
+      <td>TextNode</td>
+      <td>Comment</td>
+      <td>DocumentFragment</td>
+    </tr>
+    <tr>
+      <th>输入</th>
+      <td>tagName, 比如 body</td>
+      <td>doc</td>
+      <td>text</td>
+      <td>cmt</td>
+      <td>frag</td>
+    </tr>
+  </table>
+
+  <section id="samples">
+    <iframe src="" frameborder="0"></iframe>
+    <form action="">
+      <fieldset>
+        <legend></legend>
+      </fieldset>
+      <select name="" id="">
+        <option value=""></option>
+        <option value=""></option>
+      </select>
+    </form>
+  </section>
+
+  <section id="bar">
+    <a href="javascript:;" id="expandAll">Expand all</a>
+    <a href="javascript:;" id="collapseAll">Collapse all</a>
+  </section>
+
+  <section id="output">
+  </section>
+
+  <script src="script.js"></script>
+
+  <section>
+    <p>Chrome Devtools 查看原型链: </p>
+    <ul>
+      <li>Elements 面板的 Properties 子面板。</li>
+      <li>Console 面板输入 <code>dir(node)</code> 可以查看 node 的原型链，例如 <code>dir(document)。</code></li>
+    </ul>
+  </section>
+
+</body>
+</html>
